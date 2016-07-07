@@ -101,6 +101,7 @@ puts c
 
 ```ruby
 a = STDIN.gets
+a.rstrip
 
 puts a
 
@@ -109,6 +110,10 @@ puts a.length
 puts a.reverse
 
 puts a.upcase
+
+puts a.slice(1..-2)
+
+
 
 
 # 入力例
