@@ -35,10 +35,10 @@ puts "Hello World"
 # 存在しない型
   Bool
 # 存在する型と具体例
-# Fixnum: 12
-# Bignum: 1111111111
-# Float: 1.2
-# String: "abc"
+  Fixnum: 12
+  Bignum: 1111111111
+  Float: 1.2
+  String: "abc"
 
 ```
 
@@ -59,6 +59,25 @@ puts "Hello World"
 
 
 ```ruby
+a, b = STDIN.gets.split(' ').map(&:to_i)
+
+if a <= 12 then
+  c = 700
+elsif a <= 18 then
+  c = 1000
+elsif a <= 22 then
+  c = 1200
+else
+  c = 1500
+end
+
+if b == 1 then
+  c -= 200
+end
+
+puts c
+
+
 # 入力例1
 # 12 0
 # 出力例 1
@@ -67,8 +86,6 @@ puts "Hello World"
 # 19 1
 # 出力例2
 # 1000
-
-
 ```
 
 ## 4. 適切なプログラムを書け
@@ -83,6 +100,17 @@ puts "Hello World"
 - アルファベットのa, b, c を大文字, その他のアルファベットや数字・記号はそのまま表示
 
 ```ruby
+a = STDIN.gets
+
+puts a
+
+puts a.length
+
+puts a.reverse
+
+puts a.upcase
+
+
 # 入力例
 # ab5?cd
 # 出力例
